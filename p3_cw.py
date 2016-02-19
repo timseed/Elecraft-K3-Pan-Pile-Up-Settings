@@ -16,7 +16,7 @@ p3_plus_mode = [('#FXT0;#FXA0;','P3 reset Tracking Mode'),
                 ('#FXT1;#FXA3;', 'P3 into sticky mode'),
                 ('DN4;', 'K3 VFO-A UP 1 Khz')]
 
-sp = Serial('/dev/cu.usbserial-A7004VW8', 38400, timeout=1)
+sp = Serial('/dev/ttyUSB0', 38400, timeout=1)
 for a in p3_plus_mode:
     cmd = a[0]
     what = a[1]

@@ -7,7 +7,7 @@ p3_plus_mode=[
 ]
 
 
-sp=Serial('/dev/cu.usbserial-A7004VW8',38400,timeout=1)
+sp=Serial('/dev/ttyUSB0',38400,timeout=1)
 for a in p3_plus_mode:
     cmd=a[0]
     what=a[1]
