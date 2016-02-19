@@ -3,11 +3,11 @@ import time
 
 
 p3_plus_mode=[
-('#FXT0;','P3 into NON sticky mode')
+('#FXT0;#FXA3;','P3 into NON sticky mode')
 ]
 
 
-sp=Serial('/dev/tty.usbserial-A7004VW8',38400,timeout=1)
+sp=Serial('/dev/cu.usbserial-A7004VW8',38400,timeout=1)
 for a in p3_plus_mode:
     cmd=a[0]
     what=a[1]
