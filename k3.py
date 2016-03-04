@@ -64,7 +64,7 @@ class k3_p3(object):
         """
 
         steps=k3_steps()
-        p3_jump = int((p3_screen_width - p3_offset)/2)
+        p3_jump = int((p3_screen_width-p3_offset) /2)
         UP_CMD=steps.bw('UP',p3_jump)
         DN_CMD=steps.bw('DN',p3_jump)
         if self._serial=="TEST":
@@ -77,8 +77,8 @@ class k3_p3(object):
             cmd = self.p3_plus_mode[a][0]
             what = self.p3_plus_mode[a][1]
             if a==1:
-                span=int((p3_screen_width-p3_offset)/100)
-                cmd=str.format("#SPN{num:06d}".format(num=span))
+                span=int((p3_screen_width/100))
+                cmd=str.format("#SPN{num:06d};".format(num=span))
             elif a==2:
                 cmd=UP_CMD
             elif a==4:

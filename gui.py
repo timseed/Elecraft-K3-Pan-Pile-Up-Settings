@@ -61,7 +61,7 @@ class Processing(DataSet):
 
     device    = StringItem("Control Device ", "Device")
     offset    = FloatItem("Offset", default=200, min=0, max=5000, unit=u'Hz', slider=True)
-    bandwidth = FloatItem("Bandwidth", default=1500, min=0, max=5000, unit=u'Hz', slider=True)
+    bandwidth = FloatItem("Bandwidth", default=1500, min=0, max=10000, unit=u'Hz', slider=True)
     choice = ChoiceItem("Action",
                         [('1', "Set P3"), ('0', "RESET"),('-1',"QUIT")])
     processButton = ButtonItem("DO IT", hi).set_pos(col = 0, colspan = 2)
